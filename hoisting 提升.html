@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 會出現錯誤：Uncaught ReferenceError: text is not defined
+        // console.log(text)
+
+        // 會出現錯誤：Uncaught ReferenceError: text is not defined
+        // console.log(text)
+        // text = 'abc'
+
+        // 會出現錯誤：Uncaught ReferenceError: Cannot access 'text' before initialization
+        // console.log(text)
+        // const text = 'abc'
+
+        console.log(text)  // undefined
+        var text = 'abc'
+
+        // text = 'abc' 等同做出宣告，故後面console.log會輸出abc
+        // text = 'abc'
+        // console.log(text)  // abc
+
+
+        // function declartion 會提升
+        hi('SSS')
+        function hi(name) {
+            console.log('hi! ' + name)
+        }
+
+
+        // function expression
+        console.log(hi2)  // undefined
+        // 會出現錯誤：Uncaught ReferenceError: hi2 is not a funstion
+        // hi2('BBB')
+        var hi2 = function (name) {
+            console.log('hi! ' + name)
+        }
+
+    </script>
+</body>
+
+</html>
